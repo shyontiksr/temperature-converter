@@ -1,0 +1,61 @@
+*{box-sizing: border-box;}
+
+header {
+    background-color:olive;
+    height: 125px;
+}
+
+h1 {
+    padding-top: 25px;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 3px burlywood;
+    font-size: 60px;
+}
+
+h2 {
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 1px olive;
+    font-weight: 500;
+}
+
+body {
+    background-color: peachpuff;
+}
+
+main {
+    padding-top: 40px;
+}
+
+.box1, .box2 {
+    border-top: 3px solid brown;
+    border-bottom: 3px solid brown;
+    padding: 10px;
+}
+
+.submitBtn {
+    background-color: olive;
+    text-transform: capitalize;
+    margin: 10px 0;
+    position: relative;
+    left: 550px;
+}
+
+.convert-box {
+    border: 3px solid brown;
+    margin: 20px 0;
+    padding: 20px 10px;
+}
+
+.form-label {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.form-control {
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+    left: 400px;
+    top: 40px;
+    background-color: brown;
+}

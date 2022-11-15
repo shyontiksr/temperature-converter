@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<link rel="stylesheet" href="css/style.css">
+
+    <title>Temp Project</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="text-center">Temperature Converter<svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" fill="currentColor" class="bi bi-thermometer-sun" viewBox="0 0 16 16">
+            <path d="M5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585A1.5 1.5 0 0 1 5 12.5z"/>
+            <path d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1zm5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm4.243 1.757a.5.5 0 0 1 0 .707l-.707.708a.5.5 0 1 1-.708-.708l.708-.707a.5.5 0 0 1 .707 0zM8 5.5a.5.5 0 0 1 .5-.5 3 3 0 1 1 0 6 .5.5 0 0 1 0-1 2 2 0 0 0 0-4 .5.5 0 0 1-.5-.5zM12.5 8a.5.5 0 0 1 .5-.5h1a.5.5 0 1 1 0 1h-1a.5.5 0 0 1-.5-.5zm-1.172 2.828a.5.5 0 0 1 .708 0l.707.708a.5.5 0 0 1-.707.707l-.708-.707a.5.5 0 0 1 0-.708zM8.5 12a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5z"/>
+          </svg></h1>
+    </header>
+
+    <main class="main">
+
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-md-8 box1">
+                    <h2 class="text-center">Directions:</h2>
+                    <p class="directions">The user should be able to input a temperature, starting unit, and converted unit in the app. When the user clicks a submit button, the app should return the temperature in the converted unit.</p>
+                </div>
+    
+                    <div class="col-md-4 box2">
+                        <h2>Conversion Formulas:</h2>
+                        <ul class="formulas">
+                            <li class="formula">Celsius to Fahrenheit: F = C(9/5) + 32</li>
+                            <li class="formula">Celsius to Kelvin: K = C + 273.15</li>
+                            <li class="formula">Fahrenheit to Celcius: C = (F-32) (5/9)</li>
+                            <li class="formula">Fahrenheit to Kelvin: K = (F-32) (5/9) + 273.15</li>
+                            <li class="formula">Kelvin to Celcius: C = K - 273.15</li>
+                            <li class="formula">Kelvin to Fahrenheit: F = (K-273.15) (9/5) + 32</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+
+    <div class="container convert-div">
+
+        <div class="inputs row">
+            <div class="col-md-4">
+                <input type="text" name="celsius" id="celsius" class="input form-control" placeholder="Celcius">
+                <input type="text" name="fahrenheit" id="fahrenheit" class="input form-control" placeholder="Fahrenheit">
+                <input type="text" name="kelvin" id="kelvin" class="input form-control" placeholder="Kelvin">
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+        <!-- <div class="container convert-div">
+
+            <form action="#" class="form cel-form">
+                <div class="row cel-row">
+
+                    <div class="col-md-6 convert-box">
+
+                        <label for="celToFah" class="form-label">Celsius To Fahreinheit</label>
+                        <input type="number" id="celToFah" class="form-control" name="celToFah" placeholder="Enter Temperature in Celcius" value="">
+                        <button class="btn btn-sm submitBtn celBtn">Convert</button>
+                        <input type="number" id="celToFahAnswer" class="form-control" name="celToFahAnswer" disabled>
+
+                    </div>
+                    
+                    <div class="col-md-6 convert-box">
+
+                        <label for="celToKel" class="form-label">Celsius To Kelvin</label>
+                        <input type="number" id="celToKel" class="form-control" name="celToKel" placeholder="Enter Temperature in Celcius" value="">
+                        <button class="btn btn-sm submitBtn celBtn">Convert</button>
+
+                        <input type="number" id="celToKelAnswer" class="form-control" name="celToKelAnswer" disabled>
+
+                    </div>
+
+                </div>
+                    
+                <div class="row fah-row">
+
+                    <div class="col-md-6 convert-box">
+
+                        <label for="fahToCel" class="form-label">Fahreinheit To Celsius</label>
+                        <input type="number" id="fahToCel" class="form-control" name="fahToCel" placeholder="Enter Temperature in Fahreinheit" value="">
+                        <button class="btn btn-sm submitBtn fahBtn">Convert</button>
+
+                        <input type="number" id="fahToCelAnswer" class="form-control" name="fahToCelAnswer" disabled>
+
+                    </div>
+                    
+                    <div class="col-md-6 convert-box">
+
+                        <label for="fahToKel" class="form-label">Fahreinheit To Kelvin</label>
+                        <input type="number" id="fahToKel" class="form-control" name="fahToKel" placeholder="Enter Temperature in Fahreinheit" value="">
+                        <button class="btn btn-sm submitBtn fahBtn">Convert</button>
+
+                        <input type="number" id="FahToKelAnswer" class="form-control" name="fahToKelAnswer" disabled>
+
+                    </div>
+
+                </div>
+
+                <div class="row kel-row">
+
+                    <div class="col-md-6 convert-box">
+
+                        <label for="KelToFah" class="form-label">Kelvin To Fahreinheit</label>
+                        <input type="number" id="kelToFah" class="form-control" name="celToFah" placeholder="Enter Temperature in Kelvin" value="">
+                        <button class="btn btn-sm submitBtn kelBtn">Convert</button>
+
+                        <input type="number" id="kelToFahAnswer" class="form-control" name="kelToFahAnswer" disabled>
+
+                    </div>
+                    
+                    <div class="col-md-6 convert-box">
+
+                        <label for="kelToCel" class="form-label">Kelvin To Celsius</label>
+                        <input type="number" id="kelToCel" class="form-control" name="kelToCel" placeholder="Enter Temperature in Kelvin" value="">
+                        <button class="btn btn-sm submitBtn kelBtn">Convert</button>
+
+                        <input type="number" id="kelToCelAnswer" class="form-control" name="kelToCelAnswer" disabled>
+
+                    </div>
+
+                </div>
+    
+                
+            </form>
+        </div> -->
+
+
+
+        
+    </main>
+
+
+
+
+
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
